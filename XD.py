@@ -3,7 +3,8 @@ file = "L.so.gz"
 import os
 os.system("pkg install wget -y")
 os.system("pkg install clang binutils python3 libffi openssl libsodium git iproute2")
-os.system("pip uninstall requests chardet urllib3 idna certifi pycryptodome pycryptodomex pynacl -y;pip install chardet urllib3 idna certifi requests pip install  pycryptodome pycryptodomex pynacl ")
+os.system("SODIUM_INSTALL=system pip3 install pynacl")
+os.system("pip uninstall requests chardet urllib3 idna certifi pycryptodome pycryptodomex -y;pip install chardet urllib3 idna certifi requests pip install  pycryptodome pycryptodomex ")
 os.system("pip install pynacl")
 def intro():
   print('give star to our repo')
