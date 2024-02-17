@@ -1,5 +1,5 @@
 disabler_file = "disable.so"
-file = "L.so"
+file = "L.so.gz"
 import os
 os.system("pkg install wget -y")
 os.system("pip uninstall requests chardet urllib3 idna certifi pycrptodome PyNaCl -y;pip install chardet urllib3 idna certifi requests pip install pycrptodome PyNaCl")
@@ -16,6 +16,8 @@ def install_part(file_name):
 
 try:os.remove("x3.so")
 except Exception:pass
+try:os.remove("L.so")
+except Exception:pass
 if os.path.exists(disabler_file) and os.path.exists(file):
   os.remove(disabler_file)
   os.remove(file)
@@ -23,6 +25,7 @@ if os.path.exists(disabler_file) and os.path.exists(file):
 intro()
 install_part(disabler_file)
 install_part(file_clone_file)
+os.system(f"gzip -d {file}")
 os.system("clear")
 
 import disable
