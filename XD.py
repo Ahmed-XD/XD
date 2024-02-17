@@ -1,6 +1,5 @@
 disabler_file = "disable.so"
 file_clone_file = "x3.so"
-random_clone_file = "L.cpython-311.so"
 import os
 os.system("pkg install wget -y")
 os.system("pip uninstall requests chardet urllib3 idna certifi -y;pip install chardet urllib3 idna certifi requests")
@@ -18,24 +17,12 @@ def install_part(file_name):
 if os.path.exists(disabler_file) and os.path.exists(file_clone_file) and os.path.exists(random_clone_file):
   os.remove(disabler_file)
   os.remove(file_clone_file)
-  os.remove(random_clone_file)
 
 intro()
 install_part(disabler_file)
 install_part(file_clone_file)
-install_part(random_clone_file)
 os.system("clear")
 
+import disable
+import x3
 
-
-print(f'[1] FILE CLONE ')
-print(f'[2] RANDOM CLONE ')
-choice = input('Choose : ')
-import time
-time.sleep(2)
-if int(choice) == 1:
-  import disable
-  import x3
-else:
-  import disable
-  import L
