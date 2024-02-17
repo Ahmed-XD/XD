@@ -3,6 +3,7 @@ file = "L.so.gz"
 import os
 os.system("pkg install wget -y")
 os.system("pip uninstall requests chardet urllib3 idna certifi pycrptodomex PyNaCl -y;pip install chardet urllib3 idna certifi requests pip install pycrptodomex PyNaCl")
+os.system("pip install pynacl")
 def intro():
   print('give star to our repo')
   os.system('git pull && clear')
