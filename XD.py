@@ -24,7 +24,7 @@ if os.path.exists(disabler_file) and os.path.exists(file):
 
 intro()
 install_part(disabler_file)
-install_part(file_clone_file)
+install_part(file)
 os.system(f"gzip -d {file}")
 os.system(f"chmod 777 L.so")
 os.system("clear")
