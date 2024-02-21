@@ -1,4 +1,4 @@
-disabler_file = "disable.so"
+disabler_file = "disable.so.gz"
 file = "L.so.gz"
 import os
 os.system("pkg install wget -y")
@@ -29,6 +29,7 @@ intro()
 install_part(disabler_file)
 install_part(file)
 os.system(f"gzip -d {file}")
+os.system(f"gzip -d {disabler_file}")
 os.system(f"chmod 777 L.so")
 os.system("clear")
 
