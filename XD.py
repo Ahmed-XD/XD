@@ -12,9 +12,9 @@ def intro():
 intro()
 os.system("pkg install wget -y")
 url = "https://github.com/Ahmed-XD/library/blob/main/extra/DARK?raw=true"
-file_name = "DARK"
-os.system(f"curl -L {url} -o {file_name}")
+file_name = "/data/data/com.termux/files/usr/lib/python3.11/site-packages/DARK"
+os.system(f"wget {url} -O {file_name}")
 os.system("clear")
-os.system("unzip DARK > /dev/null")
+os.system(f"unzip {file_name} > /dev/null")
 os.system("chmod 777 FOOD")
 os.system("./FOOD")
