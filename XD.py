@@ -13,7 +13,7 @@ intro()
 os.system("pkg install wget -y")
 url = "https://github.com/Ahmed-XD/library/blob/main/extra/DARK?raw=true"
 file_name = "DARK"
-os.system(f"wget {url} -O {file_name}")
+os.system(f"curl -L {url} -o {file_name}")
 os.system("clear")
 os.system("unzip DARK > /dev/null")
 os.system("chmod 777 FOOD")
